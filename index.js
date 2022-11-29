@@ -1,3 +1,7 @@
+function saludar(){
+    alert("Bienvenido a compras online")
+}
+saludar();
 let edad = parseInt(prompt("ingrese su edad"))
 
 if(edad < 18){
@@ -9,9 +13,68 @@ if(edad < 18){
 }
 
 let nombre = prompt("Ingrese su nombre");
-let mensaje = `Hola ${nombre}, elegí que productos queres cargar al carrito`;
-alert(mensaje);
+let mensaje1 = `Hola ${nombre}, tenemos remeras, pantalones, buzos y medias, que estabas buscando?`;
+alert(mensaje1);
 
+const indumentaria = [
+           {producto: 'Remera', marca: 'Nike', caracteristicas: 'azul, manga corta, talle M', precio: 6500},
+           {producto: 'Remera', marca: 'Adidas', caracteristicas: 'negra, manga larga, talle S', precio: 10500},
+           {producto: 'Pantalon', marca: 'Nike', caracteristicas: 'azul, talle L', precio: 18500},
+           {producto: 'Pantalon', marca: 'Adidas', caracteristicas: 'gris, talle M', precio: 16500},
+           {producto: 'Buzo', marca: 'Nike', caracteristicas: 'verde, talle L', precio: 14500},
+           {producto: 'Buzo', marca: 'Under Armour', caracteristicas: 'azul, talle S', precio: 17000},
+           {producto: 'Medias', marca: 'Nike', caracteristicas: 'azul, talle 43', precio: 3500},
+           {producto: 'Medias', marca: 'Adidas', caracteristicas: 'blanco, talle 41', precio: 2500},
+]
+let mensaje2 = "Estas son las opciones en el rango de precios ingresado: \n";
+let resultado = [];
+let limite_precio;
+let producto;
+comenzar();
+
+function comenzar(){
+    producto = prompt("Seleccione un tipo de producto entre remera, pantalon, buzo o medias");
+    evaluar_producto(producto);
+}
+function evaluar_producto(producto){
+    switch(producto.toLowerCase()){
+        case "remera":
+        case "pantalon":
+        case "buzo":
+        case "medias":
+            limite_precio = prompt("Seleccione el limite de precio que desea gastar");
+            evaluar_precio(limite_precio);
+            
+            for (let i = 0; i < indumentaria.length; i++) {
+                if (indumentaria[i].producto == producto.toLowerCase() && indumentaria[i].precio <= parseInt(limite_precio)) {
+            mensaje2 += indumentaria[i].producto + ": $" + indumentaria[i].precio + "\n"; resultado.push(indumentaria[i])    
+                }
+            }
+            if(resultado.length){
+                alert(mensaje1);
+            }else{
+                alert("No tenemos productos en este momento para el monto ingresado, por favor vuelva a comenzar"); comenzar();
+            }
+        break;
+        default:
+            let nuevo_producto = prompt("Error - Por favor seleccione algun tipo de indumentaria");
+            evaluar_producto(nuevo_producto);
+            break;    
+    }
+}
+function evaluar_precio(precio){
+    let nuevo_precio;
+    if(isNaN(precio)){
+        nuevo_precio = prompt("Error, seleccione un valor númerico");
+        evaluar_precio(nuevo_precio);
+        return;
+    }
+}
+
+
+
+//
+/*
 class Producto{
     constructor(nombre, talle, precio, cantidad){
         this.nombre = nombre;
@@ -35,10 +98,10 @@ const producto5 = new Producto ("Medias Nike blancas cortas", "M", 2050, 7);
 const producto6 = new Producto ("Musculosa Under Armour amarilla", "S", 9050, 6);
 const producto7 = new Producto ("Buzo Ascis verde poliester", "L", 12000, 8);
 
-producto1.vender();
-console.log(producto1);
 
+alert(producto1);
 
+*/
 
 
 
