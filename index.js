@@ -17,14 +17,14 @@ let mensaje1 = `Hola ${nombre}, tenemos remeras, pantalones, buzos y medias, que
 alert(mensaje1);
 
 const indumentaria = [
-           {producto: 'Remera', marca: 'Nike', caracteristicas: 'azul, manga corta, talle M', precio: 6500},
-           {producto: 'Remera', marca: 'Adidas', caracteristicas: 'negra, manga larga, talle S', precio: 10500},
-           {producto: 'Pantalon', marca: 'Nike', caracteristicas: 'azul, talle L', precio: 18500},
-           {producto: 'Pantalon', marca: 'Adidas', caracteristicas: 'gris, talle M', precio: 16500},
-           {producto: 'Buzo', marca: 'Nike', caracteristicas: 'verde, talle L', precio: 14500},
-           {producto: 'Buzo', marca: 'Under Armour', caracteristicas: 'azul, talle S', precio: 17000},
-           {producto: 'Medias', marca: 'Nike', caracteristicas: 'azul, talle 43', precio: 3500},
-           {producto: 'Medias', marca: 'Adidas', caracteristicas: 'blanco, talle 41', precio: 2500},
+           {producto: 'remera', marca: 'Nike', caracteristicas: 'azul, manga corta, talle M', precio: 6500},
+           {producto: 'remera', marca: 'Adidas', caracteristicas: 'negra, manga larga, talle S', precio: 10500},
+           {producto: 'pantalon', marca: 'Nike', caracteristicas: 'azul, talle L', precio: 18500},
+           {producto: 'pantalon', marca: 'Adidas', caracteristicas: 'gris, talle M', precio: 16500},
+           {producto: 'buzo', marca: 'Nike', caracteristicas: 'verde, talle L', precio: 14500},
+           {producto: 'buzo', marca: 'Under Armour', caracteristicas: 'azul, talle S', precio: 17000},
+           {producto: 'medias', marca: 'Nike', caracteristicas: 'azul, talle 43', precio: 3500},
+           {producto: 'medias', marca: 'Adidas', caracteristicas: 'blanco, talle 41', precio: 2500},
 ]
 let mensaje2 = "Estas son las opciones en el rango de precios ingresado: \n";
 let resultado = [];
